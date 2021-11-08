@@ -18,7 +18,7 @@ const port = process.env.PORT ||3001;
 
 //Configurar la conexion con mongo atlas
 const mongoose = require('mongoose');
-const uri = DATABASE_URL
+const uri = `mongodb+srv://${process.env.User}:${process.env.PASSWORD}@cluster0.l4uir.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`
 const option ={useNewUrlParser: true, useUnifiedTopology: true};
 mongoose.connect(uri, option)
 .then(()=> console.log("Base de datos Conectada correctamente"))
