@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 
 const express = require('express');
 require ('dotenv').config();
@@ -18,9 +18,9 @@ const port = process.env.PORT ||3001;
 
 //Configurar la conexion con mongo atlas
 const mongoose = require('mongoose');
-const uri = `mongodb+srv://${process.env.User}:${process.env.PASSWORD}@cluster0.l4uir.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`
+const URI = `mongodb+srv://${process.env.User}:${process.env.PASSWORD}@cluster0.l4uir.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`
 const option ={useNewUrlParser: true, useUnifiedTopology: true};
-mongoose.connect(uri, option)
+mongoose.connect(URI, option)
 .then(()=> console.log("Base de datos Conectada correctamente"))
 .catch((e)=> console.log("Error en la conexion db:",e));
 
