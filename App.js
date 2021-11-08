@@ -39,4 +39,4 @@ app.use('/api/v1/users/',users_routes);
 
 
 //Nuestro servidor debe estar escuchando
-app.listen(process.env.PORT,()=> console.log('Servidor a su servico',process.env.PORT));
+app.listen(port ,()=> console.log('Servidor a su servico ${port}'));
