@@ -35,7 +35,7 @@ const users_schema = new mongoose.Schema ({
     state: {
         type: String,
         required: true,
-        min: 1
+        
     },
 });
 module.exports = mongoose.model('users',users_schema);
